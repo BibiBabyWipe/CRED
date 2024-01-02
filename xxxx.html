@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CredConspiracyFunZone</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #282c35; /* Dark Grey Background */
+            color: #fff; /* White Text */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blob-c {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+        .shape-blob {
+            background: #FFD300; /* South Park Yellow */
+            height: 80px;
+            width: 100px;
+            border-radius: 40% 50% 30% 40%;
+            animation: transform 18s ease-in-out infinite both alternate,
+            movement_one 12s ease-in-out infinite both;
+            opacity: .7;
+            position: relative;
+        }
+
+        .shape-blob.one {
+            background: #3E4095; /* South Park Blue */
+            height: 200px;
+            width: 250px;
+            transform: rotate(-180deg);
+            animation: transform 8s ease-in-out infinite both alternate, movement_two 20s ease-in-out infinite both;
+        }
+
+        .shape-blob.six {
+            background: #3E4095; /* South Park Blue */
+            height: 100px;
+            width: 150px;
+            transform: rotate(-180deg);
+            animation: transform 5s ease-in-out infinite both alternate, movement_two 5s ease-in-out infinite both;
+        }
+
+        .shape-blob.four {
+            background: #FFD300; /* South Park Yellow */
+            height: 150px;
+            width: 120px;
+            transform: rotate(-180deg);
+            animation: transform 17s ease-in-out infinite both alternate, movement_two 13s ease-in-out infinite both;
+        }
+
+        .shape-blob.five {
+            background: #3E4095; /* South Park Blue */
+            height: 150px;
+            width: 120px;
+            transform: rotate(-180deg);
+            animation: transform 12s ease-in-out infinite both alternate, movement_two 18s ease-in-out infinite both;
+        }
+
+        .shape-blob.two {
+            background: #FFD300; /* South Park Yellow */
+            height: 200px;
+            width: 200px;
+            transform: rotate(-180deg);
+            animation: transform 10s ease-in-out infinite both alternate, movement_two 10s ease-in-out infinite both;
+        }
+
+        .shape-blob.three {
+            background: #3E4095; /* South Park Blue */
+            height: 200px;
+            width: 200px;
+            transform: rotate(-180deg);
+            animation: transform 7s ease-in-out infinite both alternate, movement_two 23s ease-in-out infinite both;
+        }
+
+        @keyframes transform {
+            0%, 100% { border-radius: 33% 67% 70% 30% / 30% 40% 70% 70%; }
+            20% { border-radius: 37% 63% 51% 49% / 37% 35% 35% 63%; }
+            40% { border-radius: 36% 64% 64% 36% / 64% 48% 52% 26%; }
+            60% { border-radius: 37% 63% 51% 49% / 30% 30% 70% 73%; }
+            80% { border-radius: 40% 60% 42% 58% / 51% 51% 49% 59%; }
+        }
+
+        @keyframes movement_one {
+            0%, 100% { transform: none; }
+            50% { transform: translate(50%, 20%) rotateY(10deg) scale(1); }
+        }
+
+        @keyframes movement_two {
+            0%, 500% { transform: none; }
+            50% { transform: translate(50%, 20%) rotate(-200deg) scale(1.3); }
+        }
+
+        h1 {
+            font-size: 4em;
+            letter-spacing: 2px;
+            font-weight: 900;
+            line-height: .9em;
+            text-align: center;
+            text-shadow: 2px 3px 15px rgba(0, 0, 0, .15);
+        }
+
+        .content {
+            text-align: center;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff; /* White Text */
+            background-color: #3E4095; /* South Park Blue */
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background-color: #FFD300; /* South Park Yellow */
+        }
+
+        /* Fun Buttons */
+        .fun-buttons {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            z-index: 3;
+        }
+
+        .fun-button {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 1em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff; /* White Text */
+            background-color: #3E4095; /* South Park Blue */
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .side-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.left-image {
+    left: 0;
+}
+
+.right-image {
+    right: 0;
+}
+
+.side-image img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.text-content {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+        .fun-button:hover {
+            background-color: #FFD300; /* South Park Yellow */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="blob-c">
+            <div class="shape-blob"></div>
+            <div class="shape-blob one"></div>
+            <div class="shape-blob two"></div>
+            <div class="shape-blob three"></div>
+            <div class="shape-blob four"></div>
+            <div class="shape-blob five"></div>
+            <div class="shape-blob six"></div>
+        </div>
+        <h1>Welcome to the Cred Universe!</h1>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content" data-aos="fade-up">
+         <!-- Left PNG -->
+    <div class="side-image left-image">
+        <img src="left-image.png" alt="Left Image">
+    </div>
+     <!-- Left PNG -->
+     <div class="side-image left-image">
+        <img src="left-image.png" alt="Left Image">
+    </div>
+     <!-- Left PNG -->
+     <div class="side-image left-image">
+        <img src="left-image.png" alt="Left Image">
+    </div>
+        <p>Welcome to CredCoin ($CRED), where authenticity meets chaos in the digital frontier!</p>
+        <p>Unleash a wave of trust, transparency, and pure craziness with CredCoin. It's not just a cryptocurrency; it's a symbol of trust, authenticity, and the wild side of the internet.</p>
+
+        <h2>Why Choose CredCoin?</h2>
+        <ul>
+            <li>Credibility in Every Transaction: Because trust is the ultimate currency, even in a world full of chaos.</li>
+            <li>Empowering Community: Join our madness-driven ecosystem that thrives on collaboration, support, and shared chaos.</li>
+            <li>Influencing the Future: Be part of the movement that challenges the digital norms. Because being normal is overrated.</li>
+        </ul>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li>Decentralized and Transparent: Our blockchain ensures every transaction is as clear as Kenny's unfortunate fate.</li>
+            <li>Community Governance: Your voice matters, just like Cartman's in the chaotic decisions of South Park.</li>
+            <li>Limited Supply: Like Chef's chocolate salty balls, CredCoin has a fixed supply for that exclusive flavor.</li>
+        </ul>
+
+        <h2>Get Started with CredCoin</h2>
+        <ul>
+            <li>Wallet Setup: Get your digital chaos container and embrace the madness.</li>
+            <li>Purchase $CRED: Join the chaos by acquiring CredCoin from reputable exchanges. Money talks, but chaos screams!</li>
+            <li>Join the Community: Connect with like-minded maniacs in our community forums, social media channels, and chaotic events.</li>
+            <li>Stay Informed: Keep up with the latest chaos through our irregular newsletters and announcements. Because predictability is boring.</li>
+        </ul>
+
+        <h2>Roadmap</h2>
+        <p>CredCoin has an insane journey ahead:</p>
+        <ul>
+            <li>Quarter 1: Launch and Community Chaos
+                <ul>
+                    <li>Introduction of CredCoin to the chaotic market.</li>
+                    <li>Community engagement initiatives and partnerships. Brace yourself!</li>
+                </ul>
+            </li>
+            <li>Quarter 2: Technology Shenanigans
+                <ul>
+                    <li>Upgrades to enhance transaction speed and security. Fasten your seatbelts!</li>
+                    <li>Community voting on key chaotic decisions. Democracy, South Park style.</li>
+                </ul>
+            </li>
+            <li>Quarter 3: Integration and Partnerships with the Weird
+                <ul>
+                    <li>Exploring partnerships with businesses that share CredCoin's love for chaos.</li>
+                    <li>Integration into various platforms for real-world weird use.</li>
+                </ul>
+            </li>
+            <li>Quarter 4: Global Recognition or Something Like It
+                <ul>
+                    <li>Marketing campaigns to increase chaotic awareness globally.</li>
+                    <li>Listing on major cryptocurrency exchanges. Because chaos deserves recognition.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p>Join the CredCoin Chaos</p>
+        <p>Invest in CredCoin today and become part of a revolutionary community that values trust, transparency, and shared chaos. Together, let's redefine credibility in the digital age, South Park style.</p>
+        <p>Empower. Connect. Embrace the Chaos of CredCoin.</p>
+
+        <a class="cta-button" href="#">Get Started Button</a>
+        <!-- Right PNG -->
+    <div class="side-image right-image">
+        <img src="right-image.png" alt="Right Image">
+    </div>
+    <!-- Right PNG -->
+    <div class="side-image right-image">
+        <img src="right-image.png" alt="Right Image">
+    </div>
+    <!-- Right PNG -->
+    <div class="side-image right-image">
+        <img src="right-image.png" alt="Right Image">
+    </div>
+
+    </div>
+
+    <!-- Fun Buttons -->
+    <div class="fun-buttons">
+        <a class="fun-button" href="#">Conspiracies</a>
+        <a class="fun-button" href="#">Merchandise</a>
+        <a class="fun-button" href="#">Events</a>
+        <a class="fun-button" href="#">Join Us</a>
+    </div>
+
+    <script>
+        // Set the date we're counting down to (replace this with your event date)
+        var countDownDate = new Date("Jan 31, 2024 00:00:00").getTime();
+
+        // Update the countdown every 1 second
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown-timer").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+    <script>
+        // Function to get a random position within the viewport
+        function getRandomPosition() {
+            var x = Math.random() * window.innerWidth;
+            var y = Math.random() * window.innerHeight;
+            return { x: x, y: y };
+        }
+    
+        // Apply random positions to the shape-blobs
+        document.addEventListener("DOMContentLoaded", function () {
+            var blobs = document.querySelectorAll('.shape-blob');
+            blobs.forEach(function (blob) {
+                var position = getRandomPosition();
+                blob.style.left = position.x + 'px';
+                blob.style.top = position.y + 'px';
+            });
+        });
+    </script>
+</body>
+
+</html>
