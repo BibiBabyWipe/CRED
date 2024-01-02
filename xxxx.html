@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CredConspiracyFunZone</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #282c35; /* Dark Grey Background */
+            color: #fff; /* White Text */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blob-c {
+            min-height: 100vh;
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+        }
+
+        .shape-blob {
+            background: #FFD300; /* South Park Yellow */
+            height: 80px;
+            width: 100px;
+            border-radius: 40% 50% 30% 40%;
+            animation: transform 18s ease-in-out infinite both alternate,
+            movement_one 12s ease-in-out infinite both;
+            opacity: .7;
+            position: absolute;
+        }
+
+        .shape-blob.one {
+            background: #3E4095; /* South Park Blue */
+            height: 200px;
+            width: 250px;
+            transform: rotate(-180deg);
+            animation: transform 8s ease-in-out infinite both alternate, movement_two 20s ease-in-out infinite both;
+        }
+
+        .shape-blob.six {
+            background: #3E4095; /* South Park Blue */
+            height: 100px;
+            width: 150px;
+            transform: rotate(-180deg);
+            animation: transform 5s ease-in-out infinite both alternate, movement_two 5s ease-in-out infinite both;
+        }
+
+        .shape-blob.four {
+            background: #FFD300; /* South Park Yellow */
+            height: 150px;
+            width: 120px;
+            transform: rotate(-180deg);
+            animation: transform 17s ease-in-out infinite both alternate, movement_two 13s ease-in-out infinite both;
+        }
+
+        .shape-blob.five {
+            background: #3E4095; /* South Park Blue */
+            height: 150px;
+            width: 120px;
+            transform: rotate(-180deg);
+            animation: transform 12s ease-in-out infinite both alternate, movement_two 18s ease-in-out infinite both;
+        }
+
+        .shape-blob.two {
+            background: #FFD300; /* South Park Yellow */
+            height: 200px;
+            width: 200px;
+            transform: rotate(-180deg);
+            animation: transform 10s ease-in-out infinite both alternate, movement_two 10s ease-in-out infinite both;
+        }
+
+        .shape-blob.three {
+            background: #3E4095; /* South Park Blue */
+            height: 200px;
+            width: 200px;
+            transform: rotate(-180deg);
+            animation: transform 7s ease-in-out infinite both alternate, movement_two 23s ease-in-out infinite both;
+        }
+
+        @keyframes transform {
+            0%, 100% { border-radius: 33% 67% 70% 30% / 30% 40% 70% 70%; }
+            20% { border-radius: 37% 63% 51% 49% / 37% 35% 35% 63%; }
+            40% { border-radius: 36% 64% 64% 36% / 64% 48% 52% 26%; }
+            60% { border-radius: 37% 63% 51% 49% / 30% 30% 70% 73%; }
+            80% { border-radius: 40% 60% 42% 58% / 51% 51% 49% 59%; }
+        }
+
+        @keyframes movement_one {
+            0%, 100% { transform: none; }
+            50% { transform: translate(50%, 20%) rotateY(10deg) scale(1); }
+        }
+
+        @keyframes movement_two {
+            0%, 500% { transform: none; }
+            50% { transform: translate(50%, 20%) rotate(-200deg) scale(1.3); }
+        }
+
+        h1 {
+            font-size: 4em;
+            letter-spacing: 2px;
+            font-weight: 900;
+            line-height: .9em;
+            text-align: center;
+            text-shadow: 2px 3px 15px rgba(0, 0, 0, .15);
+        }
+
+        .content {
+            text-align: center;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff; /* White Text */
+            background-color: #3E4095; /* South Park Blue */
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background-color: #FFD300; /* South Park Yellow */
+        }
+
+        /* Fun Buttons */
+        .fun-buttons {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            z-index: 3;
+        }
+
+        .fun-button {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 1em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff; /* White Text */
+            background-color: #3E4095; /* South Park Blue */
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .fun-button:hover {
+            background-color: #FFD300; /* South Park Yellow */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="blob-c">
+            <div class="shape-blob"></div>
+            <div class="shape-blob one"></div>
+            <div class="shape-blob two"></div>
+            <div class="shape-blob three"></div>
+            <div class="shape-blob four"></div>
+            <div class="shape-blob five"></div>
+            <div class="shape-blob six"></div>
+        </div>
+        <h1>Welcome to the Cred Universe!</h1>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <p>Explore the mysterious world of CredConspiracyFunZone where drinks, influencers, and adventures collide!</p>
+        <p>Join our exclusive Telegram channel for behind-the-scenes content, challenges, and giveaways.</p>
+        <p>Unleash your influence and discover the truth behind the Cred craze. Beware of unseen influencers!</p>
+        <img class="image-placeholder" src="https://via.placeholder.com/600x400" alt="Placeholder Image">
+        <p>Don't miss out on the excitement. Grab your limited edition CredConspiracyFunZone gear now!</p>
+        <a class="cta-button" href="#">Get Exclusive Merch</a>
+
+        <!-- Latest Discoveries Section -->
+        <div class="latest-discoveries">
+            <h2>Latest Discoveries</h2>
+            <p>🔍 Unearth the hidden secrets of Cred! Our investigators have just uncovered shocking revelations about the Cred conspiracy.</p>
+            <p>Stay tuned for more updates!</p>
+        </div>
+
+        <!-- Fan Testimonials Section -->
+        <div class="fan-testimonials">
+            <h2>Fan Testimonials</h2>
+            <p>🌟 "CredConspiracyFunZone is the epicenter of all things Cred! I've never felt more connected to the Crediverse!" - SuperCredFan123</p>
+            <p>Share your testimonial with us on Telegram!</p>
+        </div>
+
+        <!-- Countdown for Upcoming Event -->
+        <div class="countdown">
+            <h2>Countdown to the Next Event</h2>
+            <p id="countdown-timer"></p>
+        </div>
+    </div>
+
+    <!-- Fun Buttons -->
+    <div class="fun-buttons">
+        <a class="fun-button" href="#">Conspiracies</a>
+        <a class="fun-button" href="#">Merchandise</a>
+        <a class="fun-button" href="#">Events</a>
+        <a class="fun-button" href="#">Join Us</a>
+    </div>
+
+    <script>
+        // Set the date we're counting down to (replace this with your event date)
+        var countDownDate = new Date("Jan 31, 2024 00:00:00").getTime();
+
+        // Update the countdown every 1 second
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown-timer").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
