@@ -4,14 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CredConspiracyFunZone</title>
+    <title>CRED COIN</title>
     <style>
+        @font-face {
+            font-family: 'SouthParkFont';
+            src: url('https://credcoin.xyz/southpark.ttf') format('truetype');
+        }
+
         body {
             margin: 0;
             padding: 0;
             background-color: #282c35; /* Dark Grey Background */
             color: #fff; /* White Text */
-            font-family: 'Arial', sans-serif;
+            font-family: 'SouthParkFont', Arial, sans-serif;
+        }
+
+        .dialogue-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #363c49; /* Darker Grey Background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .character {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .line {
+            margin-bottom: 20px;
         }
 
         .container {
@@ -25,10 +48,12 @@
         }
 
         .blob-c {
-            min-height: 100vh;
-            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
             position: absolute;
             width: 100%;
+            height: 100%;
         }
 
         .shape-blob {
@@ -39,8 +64,9 @@
             animation: transform 18s ease-in-out infinite both alternate,
             movement_one 12s ease-in-out infinite both;
             opacity: .7;
-            position: absolute;
+            position: relative;
         }
+
 
         .shape-blob.one {
             background: #3E4095; /* South Park Blue */
@@ -168,6 +194,33 @@
             border-radius: 5px;
             transition: background-color 0.3s ease-in-out;
         }
+        .side-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.left-image {
+    left: 0;
+}
+
+.right-image {
+    right: 0;
+}
+
+.side-image img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.text-content {
+    max-width: 600px;
+    margin: 20px auto;
+}
 
         .fun-button:hover {
             background-color: #FFD300; /* South Park Yellow */
@@ -186,71 +239,274 @@
             <div class="shape-blob five"></div>
             <div class="shape-blob six"></div>
         </div>
-        <h1>Welcome to the Cred Universe!</h1>
+        <h1>Welcome to the Cred Coin!</h1>
+        <p> CA: 0x0000</p>
     </div>
 
     <!-- Content Section -->
-    <div class="content">
-        <p>Explore the mysterious world of CredConspiracyFunZone where drinks, influencers, and adventures collide!</p>
-        <p>Join our exclusive Telegram channel for behind-the-scenes content, challenges, and giveaways.</p>
-        <p>Unleash your influence and discover the truth behind the Cred craze. Beware of unseen influencers!</p>
-        <img class="image-placeholder" src="https://via.placeholder.com/600x400" alt="Placeholder Image">
-        <p>Don't miss out on the excitement. Grab your limited edition CredConspiracyFunZone gear now!</p>
-        <a class="cta-button" href="#">Get Exclusive Merch</a>
-
-        <!-- Latest Discoveries Section -->
-        <div class="latest-discoveries">
-            <h2>Latest Discoveries</h2>
-            <p>🔍 Unearth the hidden secrets of Cred! Our investigators have just uncovered shocking revelations about the Cred conspiracy.</p>
-            <p>Stay tuned for more updates!</p>
+    <div class="content" data-aos="fade-up">
+         <!-- Left PNG -->
+    <div class="side-image left-image">
+        <img src="left-image.png" alt="Left Image">
+    </div>
+     <!-- Left PNG -->
+     <div class="side-image left-image">
+        <img src="left-image.png" alt="Left Image">
+    </div>
+     <!-- Left PNG -->
+     <div class="side-image left-image">
+        <img src="left-image.png" alt="Left Image">
+    </div>
+    
+    <body>
+        <div class="dialogue-container">
+            <!-- Dialogue 1 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Hey losers, gather 'round! It's time for the $CRED revolution. Get ready to be cooler than Kenny's frozen corpse, and yes, that's possible!"
+            </div>
+        
+            <!-- Dialogue 2 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="kyle.gif" alt="Kyle" class="character-img">
+                    <div class="character">Kyle:</div>
+                </div>
+                "Cartman, you moron! $CRED won't make us cool; it'll make us broke."
+            </div>
+        
+            <!-- Dialogue 3 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Kyle, your lack of financial vision is why you'll never drive a Lamborghini like me. $CRED is the shortcut to swag, my friend."
+            </div>
+        
+            <!-- Dialogue 4 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="kyle.gif" alt="Kyle" class="character-img">
+                    <div class="character">Kyle:</div>
+                </div>
+                "Idiot Cartman, seems like $CRED is one of your scams. I'm not falling for it."
+            </div>
+        
+            <!-- Dialogue 5 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Kyle, you're like the dial-up internet of skepticism – outdated and annoying. $CRED is the fiber-optic of success, my man."
+            </div>
+        
+            <!-- Dialogue 6 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="kyle.gif" alt="Kyle" class="character-img">
+                    <div class="character">Kyle:</div>
+                </div>
+                "Even a talking piece of poo has more credibility than your $CRED."
+            </div>
+        
+            <!-- Dialogue 7 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "SHUT THE FUCK UP KYLE , $CRED is the golden ticket to popularity. With it, I'll have more friends than Facebook, and that's saying something."
+            </div>
+        
+            <!-- Dialogue 8 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="kyle.gif" alt="Kyle" class="character-img">
+                    <div class="character">Kyle:</div>
+                </div>
+                "Cartman, you're kinda retarded when it comes to money. $CRED is gonna be just another chapter in your book of financial disasters."
+            </div>
+        
+            <!-- Dialogue 9 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Listen up, fools! $CRED is the VIP pass to the cool club. You want respect? Buy $CRED and watch everyone bow down."
+            </div>
+        
+            <!-- Dialogue 10 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="stan.gif" alt="Stan" class="character-img">
+                    <div class="character">Stan:</div>
+                </div>
+                "Dude, you said the same shit about SafeMoon.' I'm not falling for your scams again."
+            </div>
+        
+            <!-- Dialogue 11 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Stan, $CRED is not a rugpull. It's the master key to the kingdom of popularity. Girls love a guy with big $CRED, trust me."
+            </div>
+        
+            <!-- Dialogue 14 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="kyle.gif" alt="Kyle" class="character-img">
+                    <div class="character">Kyle:</div>
+                </div>
+                "How do i even buy that shit. Is it on Binance? My mom only lets me buy coins from Robinhood or Binance."
+            </div>
+        
+            <!-- Dialogue 15 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Fucking retard Kyle, learn how to use uniswap or bananabot already. You are gonna miss the golden bull of 2024."
+            </div>
+        
+            <!-- Dialogue 16 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="kyle.gif" alt="Kyle" class="character-img">
+                    <div class="character">Kyle:</div>
+                </div>
+                "Shut up man. I will ask Stan how to buy it. He bought SHIB at launch i heard."
+            </div>
+        
+            <!-- Dialogue 18 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="stan.gif" alt="Stan" class="character-img">
+                    <div class="character">Stan:</div>
+                </div>
+                "Kyle, you need to download Metamask on your browser. Do you have your ETH ready?"
+            </div>
+        
+            <!-- Dialogue 19 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Stan, teach this idiot how to use his laptop. I'm not gonna be buttfucked by ETH snipers again man. Dev did fairlaunch with anti-sniper measures. Heard he's pretty based"
+            </div>
+        
+            <!-- Dialogue 20 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="stan.gif" alt="Stan" class="character-img">
+                    <div class="character">Stan:</div>
+                </div>
+                "What the fuck are you talking about Cartman. Have you been trading shitcoins with your mom's credit card all night?"
+            </div>
+        
+            <!-- Dialogue 21 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Quit yanking my chain. I only lost like 20 Ethereums. I will make it back with $CRED"
+            </div>
+        
+            <!-- Dialogue 24 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="kyle.gif" alt="Kyle" class="character-img">
+                    <div class="character">Kyle:</div>
+                </div>
+                "Cartman, your idea of rich is making the Tooth Fairy bankrupt. $CRED is not the answer."
+            </div>
+        
+            <!-- Dialogue 25 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Enough debate! $CRED is the golden fleece. Grab it now, or forever be the sheep in the field of mediocrity."
+            </div>
+        
+            <!-- Dialogue 28 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="stan.gif" alt="Stan" class="character-img">
+                    <div class="character">Stan:</div>
+                </div>
+                "I will buy some $CRED if it somehow makes Wendy like me more"
+            </div>
+        
+            <!-- Dialogue 30 -->
+            <div class="line">
+                <div class="character-container">
+                    <img src="kyle.gif" alt="Kyle" class="character-img">
+                    <div class="character">Kyle:</div>
+                </div>
+                "You both are retarded. Hope IRS audits the shit out of your crypto gains"
+            </div>
         </div>
+        
+        <!-- Right PNG -->
+    <div class="side-image right-image">
+        <img src="right-image.png" alt="Right Image">
+    </div>
+    <!-- Right PNG -->
+    <div class="side-image right-image">
+        <img src="right-image.png" alt="Right Image">
+    </div>
+    <!-- Right PNG -->
+    <div class="side-image right-image">
+        <img src="right-image.png" alt="Right Image">
+    </div>
 
-        <!-- Fan Testimonials Section -->
-        <div class="fan-testimonials">
-            <h2>Fan Testimonials</h2>
-            <p>🌟 "CredConspiracyFunZone is the epicenter of all things Cred! I've never felt more connected to the Crediverse!" - SuperCredFan123</p>
-            <p>Share your testimonial with us on Telegram!</p>
-        </div>
-
-        <!-- Countdown for Upcoming Event -->
-        <div class="countdown">
-            <h2>Countdown to the Next Event</h2>
-            <p id="countdown-timer"></p>
-        </div>
     </div>
 
     <!-- Fun Buttons -->
     <div class="fun-buttons">
-        <a class="fun-button" href="#">Conspiracies</a>
-        <a class="fun-button" href="#">Merchandise</a>
-        <a class="fun-button" href="#">Events</a>
-        <a class="fun-button" href="#">Join Us</a>
+        <a class="fun-button" href="https://t.me/CREDCOINETH">Telegram</a>
+        <a class="fun-button" href="https://twitter.com/CREDCOINETH">Twitter</a>
+        <a class="fun-button" href="https://dexscreener.com/">Chart</a>
+        <a class="fun-button" href="https://uniswap.org/">Buy</a>
     </div>
-
     <script>
-        // Set the date we're counting down to (replace this with your event date)
-        var countDownDate = new Date("Jan 31, 2024 00:00:00").getTime();
-
-        // Update the countdown every 1 second
-        var x = setInterval(function () {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
-
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h " +
-                minutes + "m " + seconds + "s ";
-
-            // If the countdown is over, display a message
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown-timer").innerHTML = "EXPIRED";
-            }
-        }, 1000);
+        // Function to get a random position within the viewport
+        function getRandomPosition() {
+            var x = Math.random() * 1920;
+            var y = Math.random() * 1080;
+            return { x: x, y: y };
+        }
+    
+        // Apply random positions to the shape-blobs
+        document.addEventListener("DOMContentLoaded", function () {
+            var blobs = document.querySelectorAll('.shape-blob');
+            blobs.forEach(function (blob) {
+                var position = getRandomPosition();
+                blob.style.left = position.x + 'px';
+                blob.style.top = position.y + 'px';
+            });
+        });
     </script>
+    <script>
+        document.addEventListener('click', function() {
+          var audio = new Audio('https://credcoin.xyz/theme.mp3');
+          audio.play();
+          document.removeEventListener('click', arguments.callee);
+        });
+      </script>
+      
 </body>
 
 </html>
