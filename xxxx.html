@@ -6,12 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CredConspiracyFunZone</title>
     <style>
+        @font-face {
+            font-family: 'SouthParkFont';
+            src: url('https://credcoin.xyz/southpark.ttf') format('truetype');
+        }
+
         body {
             margin: 0;
             padding: 0;
             background-color: #282c35; /* Dark Grey Background */
             color: #fff; /* White Text */
-            font-family: 'Arial', sans-serif;
+            font-family: 'SouthParkFont', Arial, sans-serif;
+        }
+
+        .dialogue-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #363c49; /* Darker Grey Background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .character {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .line {
+            margin-bottom: 20px;
         }
 
         .container {
@@ -25,13 +48,13 @@
         }
 
         .blob-c {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
 
         .shape-blob {
             background: #FFD300; /* South Park Yellow */
@@ -43,6 +66,7 @@
             opacity: .7;
             position: relative;
         }
+
 
         .shape-blob.one {
             background: #3E4095; /* South Park Blue */
@@ -232,63 +256,211 @@
      <div class="side-image left-image">
         <img src="left-image.png" alt="Left Image">
     </div>
-        <p>Welcome to CredCoin ($CRED), where authenticity meets chaos in the digital frontier!</p>
-        <p>Unleash a wave of trust, transparency, and pure craziness with CredCoin. It's not just a cryptocurrency; it's a symbol of trust, authenticity, and the wild side of the internet.</p>
-
-        <h2>Why Choose CredCoin?</h2>
-        <ul>
-            <li>Credibility in Every Transaction: Because trust is the ultimate currency, even in a world full of chaos.</li>
-            <li>Empowering Community: Join our madness-driven ecosystem that thrives on collaboration, support, and shared chaos.</li>
-            <li>Influencing the Future: Be part of the movement that challenges the digital norms. Because being normal is overrated.</li>
-        </ul>
-
-        <h2>Key Features</h2>
-        <ul>
-            <li>Decentralized and Transparent: Our blockchain ensures every transaction is as clear as Kenny's unfortunate fate.</li>
-            <li>Community Governance: Your voice matters, just like Cartman's in the chaotic decisions of South Park.</li>
-            <li>Limited Supply: Like Chef's chocolate salty balls, CredCoin has a fixed supply for that exclusive flavor.</li>
-        </ul>
-
-        <h2>Get Started with CredCoin</h2>
-        <ul>
-            <li>Wallet Setup: Get your digital chaos container and embrace the madness.</li>
-            <li>Purchase $CRED: Join the chaos by acquiring CredCoin from reputable exchanges. Money talks, but chaos screams!</li>
-            <li>Join the Community: Connect with like-minded maniacs in our community forums, social media channels, and chaotic events.</li>
-            <li>Stay Informed: Keep up with the latest chaos through our irregular newsletters and announcements. Because predictability is boring.</li>
-        </ul>
-
-        <h2>Roadmap</h2>
-        <p>CredCoin has an insane journey ahead:</p>
-        <ul>
-            <li>Quarter 1: Launch and Community Chaos
-                <ul>
-                    <li>Introduction of CredCoin to the chaotic market.</li>
-                    <li>Community engagement initiatives and partnerships. Brace yourself!</li>
-                </ul>
-            </li>
-            <li>Quarter 2: Technology Shenanigans
-                <ul>
-                    <li>Upgrades to enhance transaction speed and security. Fasten your seatbelts!</li>
-                    <li>Community voting on key chaotic decisions. Democracy, South Park style.</li>
-                </ul>
-            </li>
-            <li>Quarter 3: Integration and Partnerships with the Weird
-                <ul>
-                    <li>Exploring partnerships with businesses that share CredCoin's love for chaos.</li>
-                    <li>Integration into various platforms for real-world weird use.</li>
-                </ul>
-            </li>
-            <li>Quarter 4: Global Recognition or Something Like It
-                <ul>
-                    <li>Marketing campaigns to increase chaotic awareness globally.</li>
-                    <li>Listing on major cryptocurrency exchanges. Because chaos deserves recognition.</li>
-                </ul>
-            </li>
-        </ul>
-
-        <p>Join the CredCoin Chaos</p>
-        <p>Invest in CredCoin today and become part of a revolutionary community that values trust, transparency, and shared chaos. Together, let's redefine credibility in the digital age, South Park style.</p>
-        <p>Empower. Connect. Embrace the Chaos of CredCoin.</p>
+    
+    <body>
+        <div class="dialogue-container">
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Hey losers, listen up! Welcome to CredCoin ($CRED), where the real chaos begins, you dumbasses!"
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="kyle.gif" alt="Kyle" class="character-img">
+                    <div class="character">Kyle:</div>
+                </div>
+                "Oh great, another one of your schemes, Cartman. What's so special about this CredCoin thing?"
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Well, you see, it's not just a cryptocurrency; it's a symbol of trust, authenticity, and the wild side of the internet. It's like having the power of Kenny's constant comebacks, but in digital form."
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="stan.gif" alt="Stan" class="character-img">
+                    <div class="character">Stan:</div>
+                </div>
+                "Wait, isn't trust a big deal in any currency? And why are we comparing it to Kenny's... you know?"
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Shut up, Stan! This is important. Listen up, you need CredCoin because without it, you're more screwed than Butters in one of my brilliant schemes."
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="kyle.gif" alt="Kyle" class="character-img">
+                    <div class="character">Kyle:</div>
+                </div>
+                "I don't trust anything you say, Cartman. Why should we join this madness-driven ecosystem of yours?"
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Because, Kyle, it's like being part of a South Park episode, only real. And you know how awesome our adventures are. Plus, you get to decide stuff, just like I do in our group."
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="stan.gif" alt="Stan" class="character-img">
+                    <div class="character">Stan:</div>
+                </div>
+                "Decide stuff? Like what?"
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Like, you can influence the future, be part of a movement that challenges the digital norms. Because being normal is for suckers, just ask Token."
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="kyle.gif" alt="Kyle" class="character-img">
+                    <div class="character">Kyle:</div>
+                </div>
+                "I still don't get it. What's in it for us?"
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Limited supply, my friend! Like Chef's chocolate salty balls, CredCoin has a fixed supply for that exclusive flavor. And you can't get enough of it, trust me."
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="stan.gif" alt="Stan" class="character-img">
+                    <div class="character">Stan:</div>
+                </div>
+                "Okay, what about getting started with CredCoin? How do we do that?"
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Simple, morons. Get your digital chaos container, embrace the madness, and join the chaos by acquiring CredCoin from reputable exchanges. Money talks, but chaos screams louder!"
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="kyle.gif" alt="Kyle" class="character-img">
+                    <div class="character">Kyle:</div>
+                </div>
+                "And what's with joining the community and staying informed?"
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Connect with like-minded maniacs in our community forums, social media channels, and chaotic events. It's like hanging out with the boys, but online. And you gotta stay informed because predictability is more boring than Butters' bedtime stories."
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="stan.gif" alt="Stan" class="character-img">
+                    <div class="character">Stan:</div>
+                </div>
+                "What's the roadmap? Why should we care about this insane journey?"
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Because it's gonna be wild, Stan! Launch and Community Chaos – introducing CredCoin to the chaotic market and engaging in partnerships. It's gonna be wilder than a night at Casa Bonita!"
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="kyle.gif" alt="Kyle" class="character-img">
+                    <div class="character">Kyle:</div>
+                </div>
+                "And the technology upgrades?"
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Upgrades to enhance transaction speed and security. Fasten your seatbelts! We're going faster than Timmy on his wheelchair."
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="stan.gif" alt="Stan" class="character-img">
+                    <div class="character">Stan:</div>
+                </div>
+                "Global recognition or something like it, huh?"
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Marketing campaigns to increase chaotic awareness globally. More chaos, more recognition. And listing on major cryptocurrency exchanges because chaos deserves recognition. Even more than that stupid song about making love."
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="kyle.gif" alt="Kyle" class="character-img">
+                    <div class="character">Kyle:</div>
+                </div>
+                "So, we should invest in CredCoin and be part of this revolutionary community?"
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Exactly, Kyle! Invest today and become part of a revolutionary community that values trust, transparency, and shared chaos. Together, let's redefine credibility in the digital age, South Park style."
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="kyle.gif" alt="Kyle" class="character-img">
+                    <div class="character">Kyle:</div>
+                </div>
+                "Ugh, fine, I'll consider it."
+            </div>
+        
+            <div class="line">
+                <div class="character-container">
+                    <img src="cartman.gif" alt="Cartman" class="character-img">
+                    <div class="character">Cartman:</div>
+                </div>
+                "Consider it? You better do it, or you're just a big, fat, stupid-head."
+            </div>
+        </div>
+        
+     
 
         <a class="cta-button" href="#">Get Started Button</a>
         <!-- Right PNG -->
