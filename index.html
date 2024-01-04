@@ -47,6 +47,10 @@
             position: relative;
         }
 
+       .landing-container {
+            position: relative;
+        }
+
         .blob-c {
             display: flex;
             justify-content: space-around;
@@ -54,8 +58,9 @@
             position: absolute;
             width: 100%;
             height: 100%;
+            top: 0;
+            left: 0;
         }
-
         .shape-blob {
             background: #FFD300; /* South Park Yellow */
             height: 80px;
@@ -209,7 +214,12 @@
         .side-image {
             position: relative;
         }
-
+ @media (max-width: 768px) {
+            /* Adjust the max-width based on your design */
+            .blob-c {
+                flex-direction: column;
+                align-items: center;
+            }
         .side-image img {
             max-height: 100%;
             max-width: 100%;
@@ -223,17 +233,19 @@
 
 <body>
     <div class="container">
-        <div class="blob-c">
-            <div class="shape-blob"></div>
-            <div class="shape-blob one"></div>
-            <div class="shape-blob two"></div>
-            <div class="shape-blob three"></div>
-            <div class="shape-blob four"></div>
-            <div class="shape-blob five"></div>
-            <div class="shape-blob six"></div>
+        <div class="landing-container">
+            <div class="blob-c">
+                <div class="shape-blob"></div>
+                <div class="shape-blob one"></div>
+                <div class="shape-blob two"></div>
+                <div class="shape-blob three"></div>
+                <div class="shape-blob four"></div>
+                <div class="shape-blob five"></div>
+                <div class="shape-blob six"></div>
+            </div>
+            <h1>Welcome to the Cred Coin!</h1>
+            <p>CA: 0x0000</p>
         </div>
-        <h1>Welcome to the Cred Coin!</h1>
-        <p> CA: 0x0000</p>
     </div>
 
     <!-- Content Section -->
