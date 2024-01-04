@@ -194,36 +194,26 @@
             border-radius: 5px;
             transition: background-color 0.3s ease-in-out;
         }
+   .text-content {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .left-images,
+        .right-images {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px; /* Adjust the margin as needed */
+        }
+
         .side-image {
-   position: absolute;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+            position: relative;
+        }
 
-}
-
-.left-image {
-    left: 0;
-}
-
-.right-image {
-    right: 0;
-}
-
-.side-image img {
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.text-content {
-    max-width: 600px;
-    margin: 20px auto;
-}
+        .side-image img {
+            max-height: 100%;
+            max-width: 100%;
+        }
 
         .fun-button:hover {
             background-color: #FFD300; /* South Park Yellow */
@@ -247,8 +237,8 @@
     </div>
 
     <!-- Content Section -->
-    <div class="content" data-aos="fade-up">
-       <div class="left-images">
+   <div class="content" data-aos="fade-up">
+        <div class="left-images">
             <div class="side-image left-image">
                 <img src="one.gif" alt="Left Image 1">
             </div>
@@ -259,7 +249,6 @@
                 <img src="six.gif" alt="Left Image 3">
             </div>
         </div>
-    <body>
         <div class="dialogue-container">
             <!-- Dialogue 1 -->
             <div class="line">
@@ -459,6 +448,7 @@
                 "You both are retarded. Hope IRS audits the shit out of your crypto gains"
             </div>
         </div>
+        
         
         <div class="right-images">
             <div class="side-image right-image">
