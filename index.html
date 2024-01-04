@@ -187,7 +187,51 @@
             align-items: flex-end;
             z-index: 3;
         }
+.bottle {
+            position: absolute;
+            width: 89.4px; /* 30% of 298px */
+            height: 248.4px; /* 30% of 828px */
+            animation: spin 10s linear infinite;
+        }
 
+        .bottle:nth-child(1) {
+            top: 20%;
+            left: 30%;
+        }
+
+        .bottle:nth-child(2) {
+            top: 50%;
+            left: 10%;
+        }
+
+        .bottle:nth-child(3) {
+            top: 80%;
+            left: 30%;
+        }
+
+        .bottle:nth-child(4) {
+            top: 80%;
+            left: 70%;
+        }
+
+        .bottle:nth-child(5) {
+            top: 50%;
+            left: 90%;
+        }
+
+        .bottle:nth-child(6) {
+            top: 20%;
+            left: 70%;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
         .fun-button {
             margin-bottom: 10px;
             padding: 10px;
@@ -232,6 +276,14 @@
 </head>
 
 <body>
+<div class="container">
+        <img src="cred1.webp" alt="Bottle 1" class="bottle">
+        <img src="cred2.webp" alt="Bottle 2" class="bottle">
+        <img src="cred3.webp" alt="Bottle 3" class="bottle">
+        <img src="cred4.webp" alt="Bottle 4" class="bottle">
+        <img src="cred5.webp" alt="Bottle 5" class="bottle">
+        <img src="cred6.webp" alt="Bottle 6" class="bottle">
+    </div>
     <div class="container">
         <div class="landing-container">
             <div class="blob-c">
