@@ -195,14 +195,14 @@
             transition: background-color 0.3s ease-in-out;
         }
         .side-image {
-    position: absolute;
+   position: absolute;
     top: 0;
     bottom: 0;
     height: 100%;
     width: auto;
     display: flex;
-    align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .left-image {
@@ -246,19 +246,17 @@
 
     <!-- Content Section -->
     <div class="content" data-aos="fade-up">
-         <!-- Left PNG -->
-    <div class="side-image left-image">
-        <img src="one.gif" alt="Left Image">
-    </div>
-     <!-- Left PNG -->
-     <div class="side-image left-image">
-        <img src="two.gif" alt="Left Image">
-    </div>
-     <!-- Left PNG -->
-     <div class="side-image left-image">
-        <img src="six.gif" alt="Left Image">
-    </div>
-    
+       <div class="left-images">
+            <div class="side-image left-image">
+                <img src="one.gif" alt="Left Image 1">
+            </div>
+            <div class="side-image left-image">
+                <img src="two.gif" alt="Left Image 2">
+            </div>
+            <div class="side-image left-image">
+                <img src="six.gif" alt="Left Image 3">
+            </div>
+        </div>
     <body>
         <div class="dialogue-container">
             <!-- Dialogue 1 -->
@@ -460,18 +458,17 @@
             </div>
         </div>
         
-        <!-- Right PNG -->
-    <div class="side-image right-image">
-        <img src="three.gif" alt="Right Image">
-    </div>
-    <!-- Right PNG -->
-    <div class="side-image right-image">
-        <img src="four.gif" alt="Right Image">
-    </div>
-    <!-- Right PNG -->
-    <div class="side-image right-image">
-        <img src="five.gif" alt="Right Image">
-    </div>
+        <div class="right-images">
+            <div class="side-image right-image">
+                <img src="three.gif" alt="Right Image 1">
+            </div>
+            <div class="side-image right-image">
+                <img src="four.gif" alt="Right Image 2">
+            </div>
+            <div class="side-image right-image">
+                <img src="five.gif" alt="Right Image 3">
+            </div>
+        </div>
 
     </div>
 
