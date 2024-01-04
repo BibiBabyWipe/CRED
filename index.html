@@ -38,18 +38,19 @@
         }
 
         .container {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
-        }
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
 
        .landing-container {
             position: relative;
-            z-index: 1;
+            z-index: 2;
+            
         }
 
         .blob-c {
@@ -190,51 +191,37 @@
             z-index: 3;
         }
 .bottle {
-            position: absolute;
-            width: 89.4px; /* 30% of 298px */
-            height: 248.4px; /* 30% of 828px */
-            animation: spin 10s linear infinite;
-            z-index: 2;
-        }
+    width: 73.5px; /* 30% smaller than the original width */
+    height: 204px; /* 30% smaller than the original height */
+    position: fixed;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 999;
+}
 
-        .bottle:nth-child(1) {
-            top: 20%;
-            left: 30%;
-        }
+@keyframes bottleAnimation {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0);
+    }
+    25% {
+        transform: translate(100px, -100px) rotate(90deg);
+    }
+    50% {
+        transform: translate(-50px, 50px) rotate(180deg);
+    }
+    75% {
+        transform: translate(-100px, -150px) rotate(270deg);
+    }
+}
 
-        .bottle:nth-child(2) {
-            top: 50%;
-            left: 10%;
-        }
-
-        .bottle:nth-child(3) {
-            top: 80%;
-            left: 30%;
-        }
-
-        .bottle:nth-child(4) {
-            top: 80%;
-            left: 70%;
-        }
-
-        .bottle:nth-child(5) {
-            top: 50%;
-            left: 90%;
-        }
-
-        .bottle:nth-child(6) {
-            top: 20%;
-            left: 70%;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
         .fun-button {
             margin-bottom: 10px;
             padding: 10px;
@@ -279,14 +266,6 @@
 </head>
 
 <body>
-<div class="container">
-        <img src="cred1.webp" alt="Bottle 1" class="bottle">
-        <img src="cred2.webp" alt="Bottle 2" class="bottle">
-        <img src="cred3.webp" alt="Bottle 3" class="bottle">
-        <img src="cred4.webp" alt="Bottle 4" class="bottle">
-        <img src="cred5.webp" alt="Bottle 5" class="bottle">
-        <img src="cred6.webp" alt="Bottle 6" class="bottle">
-    </div>
     <div class="container">
         <div class="landing-container">
             <div class="blob-c">
@@ -301,6 +280,31 @@
             <h1>Welcome to the Cred Coin!</h1>
             <p>CA: 0x0000</p>
         </div>
+        <div class="container">
+        <div class="bottle bottle1">
+            <img src="cred1.png" alt="Bottle 1">
+        </div>
+
+        <div class="bottle bottle2">
+            <img src="cred2.png" alt="Bottle 2">
+        </div>
+
+        <div class="bottle bottle3">
+            <img src="cred3.png" alt="Bottle 3">
+        </div>
+
+        <div class="bottle bottle4">
+            <img src="cred4.png" alt="Bottle 4">
+        </div>
+
+        <div class="bottle bottle5">
+            <img src="cred5.png" alt="Bottle 5">
+        </div>
+
+        <div class="bottle bottle6">
+            <img src="cred6.png" alt="Bottle 6">
+        </div>
+    </div>
     </div>
 
     <!-- Content Section -->
@@ -561,9 +565,66 @@
           var audio = new Audio('https://credcoin.xyz/theme.mp3');
           audio.play();
           document.removeEventListener('click', arguments.callee);
+        }); </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add more bottles as needed
+            createBottle($('.bottle1'));
+            createBottle($('.bottle2'));
+            createBottle($('.bottle3'));
+            createBottle($('.bottle4'));
+            createBottle($('.bottle5'));
+            createBottle($('.bottle6'));
         });
-      </script>
-      
+
+        function createBottle($container) {
+            var randomPosition = makeNewPosition($container.parent());
+            $container.css({ top: randomPosition[0], left: randomPosition[1], rotate: Math.random() * 360 });
+            animateBottle($container);
+        }
+
+       function makeNewPosition() {
+    var h = $(window).height() - 204; // Adjusted for bottle height
+    var w = $(window).width() - 73.5; // Adjusted for bottle width
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+    return [nh, nw];
+}
+
+
+        function animateBottle($target) {
+            var newq = makeNewPosition($target.parent());
+            var oldq = $target.offset();
+            var speed = calcSpeed([oldq.top, oldq.left], newq);
+
+            $target.animate({
+                top: newq[0],
+                left: newq[1],
+                rotate: Math.random() * 360 // Add rotation
+            }, {
+                duration: speed,
+                easing: 'linear',
+                step: function (now, fx) {
+                    if (fx.prop === 'rotate') {
+                        $(this).css('transform', 'rotate(' + now + 'deg)');
+                    }
+                },
+                complete: function () {
+                    animateBottle($target);
+                }
+            });
+        }
+
+        function calcSpeed(prev, next) {
+            var x = Math.abs(prev[1] - next[1]);
+            var y = Math.abs(prev[0] - next[0]);
+            var greatest = x > y ? x : y;
+            var speedModifier = 0.1;
+            var speed = Math.ceil(greatest / speedModifier);
+            return speed;
+        }
+    </script>
 </body>
 
 </html>
